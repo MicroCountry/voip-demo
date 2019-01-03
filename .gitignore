@@ -1,0 +1,11 @@
+.project
+.classpath
+target/
+*~
+\#*#
+bin/
+logs/
+doc/
+.idea/
+*.iml
+.DS_Store
