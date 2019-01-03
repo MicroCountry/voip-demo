@@ -1,4 +1,5 @@
 ##demo运行
+    
     1.安装freeswitch，略，已经存在1000-1019这20个账户
     
     2.com.yiwise.voip
