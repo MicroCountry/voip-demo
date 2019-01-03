@@ -96,6 +96,7 @@ public class AppA implements SipListener {
                     Dialog dialog = dialogManager.getDialog(callId);
                     userAgent.acceptCall(uasRequest, dialog);
                     sipRequest = uasRequest;
+                    System.out.println("A 接听成功");
                 }else {
                     System.out.println("uas sipRequest is null");
                 }
