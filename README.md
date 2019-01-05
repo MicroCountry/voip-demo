@@ -1,6 +1,6 @@
 ##demo运行
     
-    1.安装freeswitch，略，已经存在1000-1019这20个账户
+    1.安装freeswitch，略，已经存在1000-1019这20个账户,如果不想安装，其实可以参考我的另一个项目 jain-sip-server,就是个sip的转接中心
     
     2.com.yiwise.voip
         AppA 和 AppB 模拟freeswitch的两个leg，配置项写死在代码里面

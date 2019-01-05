@@ -36,7 +36,7 @@ public class AppA implements SipListener {
     public AppA() throws Exception {
         Config config = new JavaConfig();
         config.setUserPart("1000");
-        config.setDomain("47.100.166.61:5060");
+        config.setDomain("192.168.199.195:5060");//call sip:1002@192.168.199.195:5060
         config.setPassword("1234");
         config.setMediaMode(MediaMode.captureAndPlayback);
         InetAddress inetAddress = null;

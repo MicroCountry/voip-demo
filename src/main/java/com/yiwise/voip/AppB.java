@@ -35,7 +35,7 @@ public class AppB implements SipListener {
     public AppB() throws SocketException {
         Config config = new JavaConfig();
         config.setUserPart("1001");
-        config.setDomain("47.100.166.61:5060");
+        config.setDomain("192.168.199.195:5060");
         config.setPassword("1234");
         config.setMediaMode(MediaMode.captureAndPlayback);
         InetAddress inetAddress = null;
