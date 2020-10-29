@@ -11,3 +11,10 @@
      
     4.代码来自  https://github.com/ymartineau/peers
   
+    5.新增了VipDemoListener 这个类，通过mvn clean package 打包之后，启动jar包，可以注册sip账号 
+      
+      java -jar voip-demo-1.0-SNAPSHOT.jar 账号@sip服务器:端口 账号密码
+      
+      如：java -jar voip-demo-1.0-SNAPSHOT.jar 1000@47.99.84.2:5070 yiwise
+      
+      控制台会出现sip的日志，这时候可以在控制台里面输入 call sip:1001@47.100.166.61:5060 回车即可进行外呼

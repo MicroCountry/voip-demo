@@ -26,19 +26,19 @@ import java.net.UnknownHostException;
 
 /**
  * @Author: wangguomin
- * @Date: 2018-12-13 22:21
+ * @Date: 2020-10-29 20:54
  */
-public class AppA implements SipListener {
-
+public class VipDemoListener implements SipListener {
     private UserAgent userAgent;
     private SipRequest sipRequest;
 
-    public AppA() throws Exception {
+    public VipDemoListener(String sipStr, String password) throws Exception {
         Config config = new JavaConfig();
-        config.setUserPart("1000");
+        String[] arr = sipStr.split("@");
+        config.setUserPart(arr[0]);
         //config.setDomain("192.168.199.195:5060");//call sip:1002@192.168.199.195:5060
-        config.setDomain("47.99.84.2:5070");
-        config.setPassword("yiwise");
+        config.setDomain(arr[1]);
+        config.setPassword(password);
         config.setMediaMode(MediaMode.captureAndPlayback);
         InetAddress inetAddress = null;
         try {
@@ -83,7 +83,7 @@ public class AppA implements SipListener {
             }
             command = command.trim();
             if (command.startsWith(OperationEnum.CALL)) {
-                //call sip:1001@47.100.166.61:5060
+                //call sip:1001@47.99.84.2:5080
                 String callee = command.substring(
                         command.lastIndexOf(' ') + 1);
                 call(callee);
@@ -193,7 +193,8 @@ public class AppA implements SipListener {
 
     public static void main(String[] args) throws Exception {
         try {
-            new AppA();
+            //1000@47.99.84.2:5070 yiwise
+            new VipDemoListener(args[0], args[1]);
         } catch (SocketException e) {
             e.printStackTrace();
         }
